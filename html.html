@@ -15,18 +15,23 @@
             div{
                 background-color: #8a8aab
             }
+
+              table, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
     </style> 
 </head>
 <body>
 <div>
 
     <h1>Origem do HTML</h1>
-    <p>Linguagem de marcação criada por <a href = "https://pt.wikipedia.org/wiki/Tim_Berners-Lee"><b>Tim Bernes Lee (1990)</b>
+    <p> <mark>Linguagem de marcação criada por</mark> <a href = "https://pt.wikipedia.org/wiki/Tim_Berners-Lee"><b>Tim Bernes Lee (1990)</b>
     </a>
     Para compartilhamento de documento <br>CERN
     </p>
 
-    <img src="./img/cern.jpeg].jpg" alt="Erro ao exibir a imagem do cern">
+    <img draggable="false"  src="./img/cern.jpeg].jpg" alt="Erro ao exibir a imagem do cern">
     
     </div>
     <section>
@@ -42,5 +47,60 @@
     <img src="./img/fluxo.png" alt="">
     </section>
     <p> Ao longo do anos foram a web evoluiu e novas tecnologias foram incorporadas como <span>CSS</span> e JavaScript</p>
+
+    <section id ="listas">
+        <p> Lista não ordenada</p>
+        <ul>
+            
+            <li> pera</li>
+            <li>uva</li>
+            <li>maça</li>
+
+        </ul>
+
+        <p> Lista ordenada</p>
+        <ol> 
+            <li>pera </li>
+            <li>uva</li>
+            <li>maça</li>
+        </ol>
+
+        <dl> 
+            <dt> leite</dt>
+            <dd> bebida nutritica extraida de mamiferos</dd>
+            
+            <dt>café </dt>
+            <dd> bebida obtida com a torra e a fervura do grão de café, essencial a vida</dd>
+        </dl>
+        
+        <dt> 
+           <table>
+            <caption>Churrasco finaleira</caption>
+            <tr>
+                <td>indice</td><td>nome</td><td>valor</td>
+            </tr>
+            <tr>
+                <td>1</td><td>Carne</td> <td>50,00</td>
+            </tr>
+            <tr>
+                <td>2</td><td>linguica</td><td>50,00</td>
+            </tr>
+            <tr>
+                <td>3</td><td>carvão</td><td>30,00</td>
+            </tr>
+            <tr>
+                <td>4</td><td>Agua com gas</td><td>30,00</td>
+            </tr>
+            <tr>
+                <td>5</td><td>Refrigerante</td><td>60,00</td>
+            </tr>
+             <tr> 
+                <td colspan="2" rowspan="1">Total</td>
+                <td>310,00</td>
+            </tr>
+        </table>
+
+
+    </section>
 </body>
 </html>
