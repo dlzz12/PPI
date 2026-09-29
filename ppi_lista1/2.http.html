@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo HTTP</title>
+</head>
+
+<style>
+body {
+    background-color: rgb(130, 96, 161);
+    color: rgb(204, 203, 203);
+    font-family: tahoma;
+}
+</style>
+
+<body>
+
+    <p>O http é um protocolo usado para a comunicacao entre o navegador e os servidores na web.
+    Quando acessamos um site, o navegador envia uma requisicao para o servidor e recebe uma resposta com as informacoes solicitadas.</p>
+
+    <div>
+
+        <p>Um exemplo de requisicao é o metodo GET, usado para solicitar uma pagina ou informacao de um servidor.</p>
+
+        <p>Uma requisicao pode apresentar informacoes como:</p>
+
+        <p>GET /index.html HTTP/1.1</p>
+        <p>Host: exemplo.com</p>
+        <p>User-Agent: Chrome</p>
+        <p>Accept: text/html</p>
+
+        <p>o get indica que o navegador esta solicitando uma informacao.
+        O Host mostra o servidor que esta sendo acessado e o user-agent mostra qual navegador esta sendo utilizado.</p>
+
+        <p>depois que o servidor recebe a requisicao, ele envia uma resposta para o navegador.</p>
+
+        <p>um exemplo de resposta é:</p>
+
+        <p>HTTP/1.1 200 OK</p>
+        <p>Content-Type: text/html</p>
+
+        <p>O codigo 200 indica que a requisicao foi realizada com sucesso.
+        O Content-Type indica o tipo de conteudo que foi enviado pelo servidor.</p>
+
+        <p>Exemplo de request e response:</p>
+
+        <img src="../img/fluxo.png" alt="Request HTTP" width="600" height="300">
+
+
+
+    </div>
+
+</body>
+</html>
