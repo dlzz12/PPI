@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+<style>
+body {
+  margin: 0;
+}
+.grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 10px;
+  grid-template-areas:
+    "a a . b"
+    "c d d d";
+}
+.escuro {
+  background: #444;
+  color: white;
+  padding: 10px;
+}
+.dentro {
+  grid-area: d;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+.claro {
+  background: lightgray;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="escuro" style="grid-area: a;">A</div>
+  <div class="escuro" style="grid-area: b;">B</div>
+  <div class="escuro" style="grid-area: c;">C</div>
+
+  <div class="escuro dentro">
+    <div class="claro">E</div>
+    <div class="claro">F</div>
+    <div class="claro">G</div>
+    <div class="claro">M</div>
+    <div class="claro">I</div>
+    <div class="claro">J</div>
+  </div>
+</div>
+
+</body>
+</html>

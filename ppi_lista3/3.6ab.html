@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+<style>
+.grid {
+  display: grid;
+  grid-template-columns: 150px 100px 100px 50px;
+  grid-template-rows: 80px 70px 50px;
+  gap: 5px;
+  grid-template-areas:
+    "laranja rosa claro claro"
+    "azul rosa verde bolas"
+    "amarelo amarelo verde bolas";
+}
+.laranja { grid-area: laranja; background: orange; }
+.rosa { grid-area: rosa; background: lightsalmon; }
+.claro { grid-area: claro; background: lightblue; }
+.azul { grid-area: azul; background: lightsteelblue; }
+.verde { grid-area: verde; background: yellowgreen; }
+.amarelo { grid-area: amarelo; background: goldenrod; }
+.bolas { grid-area: bolas; }
+.bola {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 80px);
+  grid-template-areas:
+  "a"
+  "b"
+  "c"
+  "d"
+  "e"
+  "g"
+  "f";
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="laranja"></div>
+  <div class="rosa"></div>
+  <div class="claro"></div>
+  <div class="azul"></div>
+  <div class="verde"></div>
+  <div class="amarelo"></div>
+  <div class="bolas">
+    <div class="bola" style="background: coral;"></div>
+    <div class="bola" style="background: rosybrown;"></div>
+    <div class="bola" style="background: darkseagreen;"></div>
+    <div class="bola" style="background: plum;"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <style>
+        .grid {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 3fr 2fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 5px;
+            grid-template-areas:
+                "a b c c"
+                "d b e f"
+                "g g e f";
+        }
+
+        .bola {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+
+        @media screen and (max-width: 600px) {
+  .grid {
+    display: block;
+  }
+  .grid > div {
+    height: 80px;
+  }
+}
+    </style>
+</head>
+
+<body>s
+
+    <div class="grid">
+        <div style="grid-area: a; background: orange;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Learn">WEB</a>
+        </div>
+        <div style="grid-area: b; background: pink;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML</a>
+        </div>
+        <div style="grid-area: c; background: lightblue;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS</a>
+        </div>
+        <div style="grid-area: d; background: lightsteelblue;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/animation">Animate</a>
+        </div>
+        <div style="grid-area: e; background: yellowgreen;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position">Position</a>
+        </div>
+        <div style="grid-area: g; background: gold;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex">Flex</a>
+        </div>
+        <div style="grid-area: f;">
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/grid">Grid</a>
+            <div class="bola" style="background: coral;"></div>
+            <div class="bola" style="background: pink;"></div>
+            <div class="bola" style="background: lightgreen;"></div>
+            <div class="bola" style="background: plum;"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

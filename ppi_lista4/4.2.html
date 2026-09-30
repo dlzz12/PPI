@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+<style>
+body {
+  margin: 0;
+}
+.grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+}
+header { grid-area: header; background: deeppink; }
+nav { grid-area: nav; background: darkkhaki; }
+main { grid-area: content; background: sandybrown; }
+footer { grid-area: footer; background: cadetblue; }
+.quadrado {
+  width: 100px;
+  height: 80px;
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <header>Header</header>
+  <nav>Nav</nav>
+  <main>
+    Content
+    <div class="quadrado"></div>
+    <p>Um texto qualquer aqui.</p>
+  </main>
+  <footer>Footer</footer>
+</div>
+
+</body>
+</html>

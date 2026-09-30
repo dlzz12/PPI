@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Responsivo</title>
+<style>
+.grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 50px 40px 1fr 40px 40px;
+  grid-template-areas:
+    "h h h"
+    "l b r"
+    "l m r"
+    "l x r"
+    "f f f";
+}
+@media screen and (max-width: 600px) {
+  .grid {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div style="grid-area: h; background: orange;">Header</div>
+  <div style="grid-area: b; background: red;">Banner</div>
+  <div style="grid-area: l; background: green;">Left Aside</div>
+  <div style="grid-area: m; background: royalblue;">Main Content</div>
+  <div style="grid-area: r; background: orange;">Right Aside</div>
+  <div style="grid-area: x; background: green;">Low Content</div>
+  <div style="grid-area: f; background: royalblue;">Footer</div>
+</div>
+
+</body>
+</html>
