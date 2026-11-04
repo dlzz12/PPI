@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Variáveis e Operadores</title>
+</head>
+<body>
+
+    <h1 id="titulo">Tipos de Variáveis e Operadores</h1>
+
+    <button id="botao">Mostrar</button>
+
+    <h2 id="titulotipos">Tipos</h2>
+    <p id="pstring"></p>
+    <p id="pnumero"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobjeto"></p>
+    <p id="parray"></p>
+
+    <h2 id="titulooperacoes">Operações</h2>
+    <p id="op1"></p>
+    <p id="op2"></p>
+    <p id="op3"></p>
+    <p id="op4"></p>
+    <p id="op5"></p>
+
+    <script>
+        function mostrar() {
+            let nome = "Maria";
+            let idade = 16;
+            let estudante = true;
+            let nota;
+            let vazio = null;
+            let pessoa = { nome: "Maria", idade: 16 };
+            let frutas = ["maçã", "banana", "uva"];
+
+            document.getElementById("pstring").innerText = "nome = " + nome + " é do tipo " + typeof nome;
+            document.getElementById("pnumero").innerText = "idade = " + idade + " é do tipo " + typeof idade;
+            document.getElementById("pboolean").innerText = "estudante = " + estudante + " é do tipo " + typeof estudante;
+            document.getElementById("pundefined").innerText = "nota = " + nota + " é do tipo " + typeof nota;
+            document.getElementById("pnull").innerText = "vazio = " + vazio + " é do tipo " + typeof vazio + " (o JavaScript mostra object para null)";
+            document.getElementById("pobjeto").innerText = "pessoa é do tipo " + typeof pessoa;
+            document.getElementById("parray").innerText = "frutas é do tipo " + typeof frutas + " (array também aparece como object)";
+
+            console.log("10" + 5);
+            console.log(true * 5);
+            console.log("10" - 5);
+            console.log("abc" * 2);
+            console.log(null + 5);
+
+            document.getElementById("op1").innerText = "\"10\" + 5 = " + ("10" + 5) + " → o + junta texto, então virou \"105\"";
+            document.getElementById("op2").innerText = "true * 5 = " + (true * 5) + " → true vale 1, então 1 * 5 = 5";
+            document.getElementById("op3").innerText = "\"10\" - 5 = " + ("10" - 5) + " → o - só faz conta, então \"10\" vira número";
+            document.getElementById("op4").innerText = "\"abc\" * 2 = " + ("abc" * 2) + " → \"abc\" não é número, então dá NaN";
+            document.getElementById("op5").innerText = "null + 5 = " + (null + 5) + " → null vale 0, então 0 + 5 = 5";
+        }
+
+        document.getElementById("botao").addEventListener("click", mostrar);
+    </script>
+
+</body>
+</html>
