@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Paleta de Cores</title>
+    <style>
+        body {
+         text-align: center;
+            padding-top: 100px;
+         font-family: Arial;
+        }
+
+        .cor {
+            display: inline-block;
+         width: 140px;
+            height: 70px;
+        padding-top: 40px;
+         margin: 0 -2px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="cor"></div>
+    <div class="cor"></div>
+    <div class="cor"></div>
+    <div class="cor"></div>
+    <div class="cor"></div>
+
+    <script>
+        function gerarCor() {
+            let letras = "0123456789ABCDEF";
+            let cor = "";
+
+            for (let i = 0; i < 6; i++) {
+             cor = cor + letras[Math.floor(Math.random() * 16)];
+            }
+
+            return cor;
+        }
+
+        function mudarCores() {
+            let divs = document.getElementsByClassName("cor");
+
+            for (let i = 0; i < divs.length; i++) {
+            let cor = gerarCor();
+            divs[i].style.backgroundColor = "#" + cor;
+                divs[i].innerHTML = cor;
+            }
+        }
+
+        document.addEventListener("keydown", function(e) {
+            if (e.code == "Space") {
+                mudarCores();
+            }
+        });
+
+        mudarCores();
+    </script>
+</body>
+</html>

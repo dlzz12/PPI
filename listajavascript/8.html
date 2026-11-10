@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cor Aleatória</title>
+</head>
+<body style="text-align: center; padding-top: 150px;">
+    <button onclick="mudarCor()">Alterar Cor de Fundo</button>
+
+    <p id="cor" onclick="copiar()"></p>
+
+    <script>
+        function mudarCor() {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            let cor = "rgb(" + r + ", " + g + ", " + b + ")";
+
+            document.body.style.backgroundColor = cor;
+            document.getElementById("cor").innerHTML = cor;
+        }
+
+        function copiar() {
+            let cor = document.getElementById("cor").innerHTML;
+            navigator.clipboard.writeText(cor);
+            alert("Cor copiada: " + cor);
+        }
+    </script>
+</body>
+</html>
